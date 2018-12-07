@@ -9,7 +9,7 @@ import versioneer
 
 INSTALL_REQUIRES = [
     'python-crontab', 'requests', 'birch', 'gspread',
-    'oauth2client',
+    'oauth2client', 'click',
 ]
 TEST_REQUIRES = [
     # testing and coverage
