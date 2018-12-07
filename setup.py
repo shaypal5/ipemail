@@ -42,10 +42,11 @@ setuptools.setup(
     extras_require={
         'test': TEST_REQUIRES + INSTALL_REQUIRES,
     },
-    entry_points='''
-        [console_scripts]
-        ipgdrive=scripts.ipgdrive_cli:cli
-    ''',
+    entry_points={
+        'console_scripts': [
+            'ipgdrive=scripts.ipgdrive_cli:cli',
+        ]
+    },
     classifiers=[
         # Trove classifiers
         # (https://pypi.python.org/pypi?%3Aaction=list_classifiers)
