@@ -29,6 +29,8 @@ Setup
 
 To enable Google Drive access, follow the `instructions here <https://gspread.readthedocs.io/en/latest/oauth2.html>`_ to create a service account with Google Drive access, and create a json key file for it.
 
+Don't forget to follow all the above instructions, including sharing your spreadsheet with an email you have in your ``json_key['client_email']`` (Otherwise you’ll get a ``SpreadsheetNotFound`` or an ``APIError`` with ``"PERMISSION_DENIED"`` exception when trying to open it).
+
 Place this file in the ``~/.config/ipgdrive/`` folder, and rename it to ``google_drive_service_account_key.json``.
 
 Additionally, create a ``cfg.json`` file inside the ``~/.config/ipgdrive/`` folder, and populate it with the following values:
