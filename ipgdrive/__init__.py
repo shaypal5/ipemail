@@ -1,6 +1,6 @@
 """ipgdrive code."""
 
-from core import (  # noqa: F401
+from .core import (  # noqa: F401
     setup_job,
 )
 
