@@ -19,3 +19,13 @@ def cli():
 def setup_job():
     """Setup the cronjob for ipgdrive."""
     ipgdrive.setup_job()
+
+
+@cli.command(help="Run the job for ipgdrive.")
+# @click.option(
+#     '-m', '--minutes', type=int,
+#     help="Run frequency in minutes."
+# )
+def run_job():
+    """Run the job for ipgdrive."""
+    ipgdrive.job_func()

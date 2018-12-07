@@ -11,7 +11,7 @@ from .cfg import (
 )
 
 
-if __name__ == "__main__":
+def job_func():
     gc = get_authenticated_gspread()
     ip = get('https://api.ipify.org').text
     print('My public IP address is: {}'.format(ip))
@@ -24,3 +24,7 @@ if __name__ == "__main__":
     worksheet.update_acell('A2', 2)
     worksheet.update_acell('B1', 'Last Time Ran')
     worksheet.update_acell('B2', str(datetime.now()))
+
+
+if __name__ == "__main__":
+    job_func()
