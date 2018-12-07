@@ -28,7 +28,7 @@ setuptools.setup(
     author_email="shay.palachy@gmail.com",
     name='ipgdrive',
     license="MIT",
-    description='Utilities for pandas.',
+    description='Write host public ip to Google Drive.',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     long_description=README,
