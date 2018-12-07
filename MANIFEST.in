@@ -1,2 +1,3 @@
 include versioneer.py
 include ipgdrive/_version.py
+include scripts/*
