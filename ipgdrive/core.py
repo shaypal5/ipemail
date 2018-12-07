@@ -35,3 +35,6 @@ def setup_job():
         ipg_job.minute.every(minutes)
         my_cron.write()
         print("crontab job for ipgdrive updated w minutes={}.".format(minutes))
+
+if __name__ == "__main__":
+    setup_job()
