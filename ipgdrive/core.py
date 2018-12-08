@@ -8,6 +8,7 @@ from .cfg import (
     IPG_CFG,
     CfgKey,
 )
+from .util import printlog
 
 
 DPATH = os.path.dirname(os.path.abspath(__file__))
@@ -29,14 +30,15 @@ def setup_job():
         )
         ipg_job.minute.every(minutes)
         my_cron.write()
-        print("New crontab job created for ipgdrive.")
+        printlog("New crontab job created for ipgdrive.")
     else:
-        print("Exsiting crontab job found for ipgdrive.")
+        printlog("Exsiting crontab job found for ipgdrive.")
         ipg_job.set_command('ipgdrive run-job')
         ipg_job.minute.every(minutes)
         ipg_job.enable()
         my_cron.write()
-        print("crontab job for ipgdrive updated w minutes={}.".format(minutes))
+        printlog(
+            "crontab job for ipgdrive updated w minutes={}.".format(minutes))
 
 
 if __name__ == "__main__":

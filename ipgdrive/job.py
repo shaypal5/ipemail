@@ -9,16 +9,17 @@ from .cfg import (
     CfgKey,
     get_authenticated_gspread,
 )
+from .util import printlog
 
 
 def job_func():
     gc = get_authenticated_gspread()
     ip = get('https://api.ipify.org').text
-    print('My public IP address is: {}'.format(ip))
+    printlog('My public IP address is: {}'.format(ip))
     # sh_name = IPG_CFG[CfgKey.SPREADSHEET_NAME]
     # print('Trying to open spreadsheet {}'.format(sh_name))
     sh_key = IPG_CFG[CfgKey.SPREADSHEET_KEY]
-    print('Trying to open spreadsheet with key: {}'.format(sh_key))
+    printlog('Trying to open spreadsheet with key: {}'.format(sh_key))
     # sh = gc.open(sh_name)
     sh = gc.open_by_key(sh_key)
     # sh = gc.create(ip)
