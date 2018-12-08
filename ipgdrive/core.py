@@ -25,7 +25,7 @@ def setup_job():
             ipg_job = job
     if ipg_job is None:
         ipg_job = my_cron.new(
-            command='ipgdrive run-job',
+            command='python --version && ipgdrive run-job',
             comment='ipgdrive',
         )
         ipg_job.minute.every(minutes)
